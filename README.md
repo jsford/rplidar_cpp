@@ -43,7 +43,7 @@ Explain how to build and run the rpdemo code...
 
 ## Authors
 
-* **Jordan Ford** - * [jrdnfrd.com](http://jrdnfrd.com)
+* **Jordan Ford** - [jrdnfrd.com](http://jrdnfrd.com)
 
 ## License
 
