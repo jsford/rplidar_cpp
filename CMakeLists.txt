@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.0)
-project(rplidar_cpp)
+project(RPLidar)
 
 set(RPLidar_VERSION 0.0.0)
 
-# Build the rplidar_cpp library.
+# Build the RPLidar library.
 find_package(Threads REQUIRED)
 
 set(RPLIDAR_SDK_PATH ${CMAKE_CURRENT_SOURCE_DIR}/sdk/)
@@ -14,7 +14,7 @@ FILE(GLOB RPLIDAR_SDK_SRC
 )
 
 add_library(${CMAKE_PROJECT_NAME} 
-            ${CMAKE_CURRENT_SOURCE_DIR}/src/rplidar_cpp.cpp
+            ${CMAKE_CURRENT_SOURCE_DIR}/src/rplidar.cpp
             ${RPLIDAR_SDK_SRC}
 )
 
@@ -32,7 +32,7 @@ target_include_directories(${CMAKE_PROJECT_NAME}
 # Build the demo executable.
 add_subdirectory(demo)
 
-# Set up install target for the rplidar_cpp library.
+# Set up install target for the RPLidar library.
 install(TARGETS ${CMAKE_PROJECT_NAME}
   EXPORT RPLidarTargets
   LIBRARY DESTINATION lib
@@ -48,8 +48,8 @@ write_basic_package_version_file(
   COMPATIBILITY SameMajorVersion
 )
 
-install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/include/rplidar_cpp.h"
-  DESTINATION include
+install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/include/RPLidar/rplidar.h"
+  DESTINATION include/RPLidar
 )
 
 install(EXPORT RPLidarTargets

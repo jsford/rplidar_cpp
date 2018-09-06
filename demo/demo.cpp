@@ -1,4 +1,4 @@
-#include "rplidar_cpp.h"
+#include "RPLidar/rplidar.h"
 #include <chrono>
 #include <iostream>
 #include <thread>

@@ -19,23 +19,42 @@ Give examples
 
 A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+Clone the repository.
 
 ```
-Give the example
+git clone https://github.com/jsford/rplidar_cpp.git
 ```
 
-And repeat
+Use cmake to build and install.
 
 ```
-until finished
+cd rplidar_cpp
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Install the udev rule for the RPLidar.
+
+```
+cd scripts
+chmod +x create_udev_rules.sh delete_udev_rules.sh
+sudo ./create_udev_rules.sh
+```
 
 ## Running the demo
 
-Explain how to build and run the rpdemo code...
+After building the code, you can run the demo by plugging in an RPLidar
+and running the rpdemo executable as follows:
+
+```
+cd rplidar_cpp/build/demo
+./rpdemo
+```
+
+The demo will start the RPLidar and print scan data for 10 seconds.
 
 ## Built With
 
