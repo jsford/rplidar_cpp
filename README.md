@@ -4,15 +4,13 @@ This is a C++17 interface to the RPLidar series of laser triangulation sensors f
 
 ## Getting Started
 
-More to come...
-
-
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Install cmake and a C++17 compiler.
+On Ubuntu, you can install cmake via the following command.
 
 ```
-Give examples
+sudo apt -y install cmake
 ```
 
 ### Installing
