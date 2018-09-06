@@ -39,12 +39,12 @@ sudo make install
 Install the udev rule for the RPLidar.
 
 ```
-cd scripts
+cd rplidar_cpp/scripts
 chmod +x create_udev_rules.sh delete_udev_rules.sh
 sudo ./create_udev_rules.sh
 ```
 
-## Running the demo
+## Running the Demo
 
 After building the code, you can run the demo by plugging in an RPLidar
 and running the rpdemo executable as follows:
@@ -55,6 +55,29 @@ cd rplidar_cpp/build/demo
 ```
 
 The demo will start the RPLidar and print scan data for 10 seconds.
+
+## Usage
+
+Place the following in your project's CMakeLists.txt:
+
+```
+cmake_minimum_required(VERSION 3.0)
+project(YOUR_PROJECT_NAME)
+
+find_package(RPLidar)
+
+add_executable(${CMAKE_PROJECT_NAME} ...)
+target_link_libraries(${CMAKE_PROJECT_NAME} RPLidar::RPLidar)
+```
+
+In your code, include the RPLidar library as follows:
+
+```
+#include <RPLidar/rplidar.h>
+```
+
+See [demo.cpp](https://github.com/jsford/rplidar_cpp/blob/master/demo/demo.cpp) for an example usage.
+Check out [RPLidar/rplidar.h](https://github.com/jsford/rplidar_cpp/blob/master/include/RPLidar/rplidar.h) to view the complete interface.
 
 ## Built With
 
