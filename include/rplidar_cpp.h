@@ -1,9 +1,19 @@
 #ifndef RPLIDAR_CPP_H_
 #define RPLIDAR_CPP_H_
 
-#include "rplidar.h"
 #include <optional>
 #include <ostream>
+#include <vector>
+
+// Forward declarations
+class rplidar_response_measurement_node_hq_t;
+namespace rp {
+  namespace standalone {
+    namespace rplidar {
+      class RPlidarDriver;
+    }
+  }
+}
 
 struct RPLidarScan {
   long int seq;

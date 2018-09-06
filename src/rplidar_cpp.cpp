@@ -1,4 +1,5 @@
 #include "rplidar_cpp.h"
+#include "rplidar.h"
 
 #include <chrono>
 #include <cstdio>

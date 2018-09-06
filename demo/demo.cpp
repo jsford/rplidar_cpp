@@ -8,7 +8,6 @@ int main(int argc, char *argv[]) {
   std::cout << "RPLidar C++ Interface Demo" << std::endl;
   std::cout << "--------------------------" << std::endl;
   std::cout << "Jordan Ford, 2018    " << std::endl;
-  std::cout << "SDK Version: " << RPLIDAR_SDK_VERSION << std::endl;
 
   RPLidar rp("/dev/rplidar");
   rp.setBaudrate(115200);
